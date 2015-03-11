@@ -1,0 +1,31 @@
+<?php
+/**
+ * English Language File for the Users Module
+ *
+ * @package users
+ * @version 0.9.4
+ * @author Cotonti Team
+ * @copyright Copyright (c) Cotonti Team 2011-2014
+ * @license BSD
+ */
+
+defined('COT_CODE') or die('Wrong URL.');
+
+$L['info_desc'] = 'User management with registration, listings and profiles';
+
+$L['cfg_disablereg'] = 'Disable registration process';
+$L['cfg_disablereg_hint'] = 'Prevent users from registering new accounts';
+$L['cfg_maxusersperpage'] = 'Maximum lines in userlist';
+$L['cfg_maxusersperpage_hint'] = '';
+$L['cfg_regnoactivation'] = 'Skip email check for new users';
+$L['cfg_regnoactivation_hint'] = '\'No\' recommended, for security reasons';
+$L['cfg_regrequireadmin'] = 'Administrators must validate new accounts';
+$L['cfg_regrequireadmin_hint'] = '';
+$L['cfg_user_email_noprotection'] = 'Disable password protection of email change';
+$L['cfg_user_email_noprotection_hint'] = '\'No\' recommended, for security reasons';
+$L['cfg_useremailchange'] = 'Allow users to change their email address';
+$L['cfg_useremailchange_hint'] = '\'No\' recommended, for security reasons';
+$L['cfg_usertextmax'] = 'Maximum length for user signature';
+$L['cfg_usertextmax_hint'] = '';
+$L['cfg_usertextimg'] = 'Allow images and HTML in user signature';
+$L['cfg_usertextimg_hint'] = '\'No\' recommended, for security reasons';
