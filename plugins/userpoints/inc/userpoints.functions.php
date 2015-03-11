@@ -72,6 +72,26 @@ function cot_get_topusers ($maingrp, $count, $sqlsearch='')
 	$t1->parse('MAIN');
 	return $t1->text('MAIN');
 }
+// show users with pro account
+function cot_get_pro ($maingrp, $count, $sqlsearch='')
+{
+    global $L, $cfg, $db, $db_users;
 
+    $t1 = new XTemplate(cot_tplfile(array('userpoints', 'index'), 'plug'));
+
+    $sqlsearch = !empty($sqlsearch) ? " AND " . $sqlsearch : '';
+
+    $prousers = $db->query("SELECT * FROM $db_users
+		WHERE user_userpoints>0 AND user_pro>0 AND user_maingrp=".$maingrp." $sqlsearch ORDER BY user_pro DESC LIMIT " . $count)->fetchAll();
+
+    foreach ($prousers as $tur)
+    {
+        $t1->assign(cot_generate_usertags($tur, 'TOP_ROW_'));
+        $t1->parse('MAIN.TOP_ROW');
+    }
+
+    $t1->parse('MAIN');
+    return $t1->text('MAIN');
+}
 
 ?>

@@ -23,4 +23,5 @@ $L['cfg_auth'] = array('Изменить рейтинг за посещение 
 $L['cfg_portfolioaddtocat'] = array('Изменить рейтинг за размещение работы в портфолио');
 
 $L['userpoints_topfreelancers'] = 'Топ-фрилансеров';
+$L['userpoints_toppro'] = 'Топ-PRO';
 $L['userpoints_topemployers'] = 'Топ-работодателей';
