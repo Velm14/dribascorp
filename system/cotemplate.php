@@ -544,6 +544,7 @@ class XTemplate
 	 */
 	public function text($block = 'MAIN')
 	{
+//        CVarDumper::dump($this->index,6,1);
 		$path = $this->index[$block];
 		if ($path)
 		{

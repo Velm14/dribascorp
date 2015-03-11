@@ -12,13 +12,10 @@
 		<div class="well well-small">{PROJECTS_CATALOG}</div>
 		
 		<!-- IF {PHP.cot_plugins_active.userpoints} -->
-		<h4 class="mboxHD">{PHP.L.userpoints_topfreelancers}</h4>
-		{PHP|cot_get_topusers (4, 5)}
+		<h4 class="mboxHD">{PHP.L.userpoints_toppro}</h4>
+		{PHP|cot_get_pro (4, 5)}
 		<br/>
-		<br/>
-		<h4 class="mboxHD">{PHP.L.userpoints_topemployers}</h4>
-		{PHP|cot_get_topusers (7, 5)}	
-		<!-- ENDIF -->	
+		<!-- ENDIF -->
 		
 		<!-- IF {INDEX_NEWS} -->
 		<br/>

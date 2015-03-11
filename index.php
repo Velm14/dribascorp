@@ -8,6 +8,7 @@
  * @copyright Copyright (c) Cotonti Team 2008-2014
  * @license BSD
  */
+require_once($_SERVER['DOCUMENT_ROOT'].'/CVarDumper.php');
 if (php_sapi_name() == 'cli-server')
 {
 	// Embedded PHP webserver routing пкурено

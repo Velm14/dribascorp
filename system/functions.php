@@ -3359,7 +3359,6 @@ function cot_tplfile($base, $type = 'module', $admin = null)
 		$admin = ($base[0] == 'admin' || ($base[1] && $base[1] == 'admin'));
 	}
 	$scan_dirs = array();
-
 	// Possible search directories depending on extension type
 	if ($type == 'plug')
 	{
@@ -3388,16 +3387,19 @@ function cot_tplfile($base, $type = 'module', $admin = null)
 		$scan_dirs[] = "{$cfg['modules_dir']}/{$base[0]}/tpl/";
 	}
 
-	// Build template file name from base parts glued with dots
+//    CVarDumper::dump($base,6,1);
+
+    // Build template file name from base parts glued with dots
 	$base_depth = count($base);
 	for ($i = $base_depth; $i > 0; $i--)
 	{
 		$levels = array_slice($base, 0, $i);
 		$themefile = implode('.', $levels) . '.tpl';
-		// Search in all available directories
+        // Search in all available directories
 		foreach ($scan_dirs as $dir)
 		{
-			if (file_exists($dir . $themefile))
+//            CVarDumper::dump($dir,6,1);
+            if (file_exists($dir . $themefile))
 			{
 				return $dir . $themefile;
 			}

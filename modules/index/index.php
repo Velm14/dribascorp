@@ -27,7 +27,6 @@ foreach (cot_getextplugins('index.first') as $pl)
 	include $pl;
 }
 /* ===== */
-
 list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = cot_auth('index', 'a');
 cot_block($usr['auth_read']);
 
@@ -53,10 +52,19 @@ foreach (cot_getextplugins('index.tags') as $pl)
 	include $pl;
 }
 /* ===== */
-
-$t->parse('MAIN');
-$t->out('MAIN');
-
+//CVarDumper::dump($t,6,1);
+//var_dump($usr);
+// check if user authorized
+if(isset($usr['profile']) && !$_GET['tpl']){
+    $t->parse('MAIN');
+    $t->out('MAIN');
+}
+else{
+    //Подключаем страничку входа для не авторизированых пользователей
+    $tt = new XTemplate(cot_tplfile('index.greet', 'module'));
+    $tt->parse('MAIN_GUEST');
+    $tt->out('MAIN_GUEST');
+}
 require_once $cfg['system_dir'].'/footer.php';
 
 if ($cache && $usr['id'] === 0 && $cfg['cache_index'])
