@@ -204,6 +204,7 @@ foreach($sqllist_rowset as $item)
 {
 	$jj++;
 	$t->assign(cot_generate_usertags($item, 'PRJ_ROW_OWNER_'));
+//	CVarDumper::dump(cot_generate_usertags($item, 'PRJ_ROW_OWNER_'),6,1);
 	$t->assign(cot_generate_projecttags($item, 'PRJ_ROW_', $cfg['projects']['shorttextlen'], $usr['isadmin'], $cfg['homebreadcrumb']));
 	$t->assign(array(
 		"PRJ_ROW_ODDEVEN" => cot_build_oddeven($jj)

@@ -12,7 +12,7 @@
 			<div class="well well-small">{USERCATEGORIES_CATALOG}</div>
 		</div>
 		<div class="span9">
-		
+
 			<div class="well">
 				<form action="{SEARCH_ACTION_URL}" method="get">
 					<input type="hidden" name="f" value="search" />
@@ -27,7 +27,7 @@
 					</div>
 				</form>
 			</div>
-			
+
 			<!-- BEGIN: USERS_ROW -->
 				<div class="row">
 					<div class="span1">
@@ -37,7 +37,13 @@
 						<div class="pull-right">
 							<span class="label label-info">{USERS_ROW_USERPOINTS}</span>
 						</div>
-						<strong>{USERS_ROW_NAME}</strong><!-- IF {USERS_ROW_ISPRO} --> <span class="label label-important">PRO</span><!-- ENDIF -->
+						<strong>
+                            <!-- IF {USERS_ROW_ISPRO} || {USERS_ROW_ISACC}-->
+                            {USERS_ROW_NAME}
+                            <!-- ELSE -->
+                            {USERS_ROW_FULL_NAME}
+                            <!-- ENDIF -->
+                        </strong><!-- IF {USERS_ROW_ISPRO} --> <span class="label label-important">PRO</span><!-- ENDIF -->
 						<p>{USERS_ROW_COUNTRY} {USERS_ROW_REGION} {USERS_ROW_CITY}</p>
 					</div>
 				</div>
@@ -51,6 +57,6 @@
 			<!-- ENDIF -->
 		</div>
 	</div>
-		
+
 
 <!-- END: MAIN -->
