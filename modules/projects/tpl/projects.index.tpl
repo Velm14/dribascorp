@@ -11,10 +11,10 @@
 		<!-- IF {PHP.usr.auth_write} -->
 		<li class="pull-right"><noindex><a rel="nofollow" class="btn btn-success" href="{PHP|cot_url('projects', 'm=add')}" title="{PHP.L.projects_add_to_catalog}">{PHP.L.projects_add_to_catalog}</a></noindex></li>
 		<!-- ENDIF -->
-	</ul>	
+	</ul>
 	<!-- END: PTYPES -->
 
-	<div class="well">			
+	<div class="well">
 		<form action="{SEARCH_ACTION_URL}" method="get">
 			<input type="hidden" name="e" value="projects" />
 			<table width="100%" cellpadding="5" cellspacing="0">
@@ -38,7 +38,7 @@
 					<td></td>
 					<td><input type="submit" name="search" class="btn" value="{PHP.L.Search}" /></td>
 				</tr>
-			</table>		
+			</table>
 		</form>
 	</div>
 <!-- END: SEARCH -->
@@ -52,7 +52,7 @@
 			<a href="{PRJ_ROW_URL}">{PRJ_ROW_SHORTTITLE}</a>
 		</h4>
 		<p class="owner small">
-            <!-- IF {PRJ_ROW_ISPRO} || {PRJ_ROW_ISACC}-->
+            <!-- IF {PRJ_ROW_OWNER_ISPRO} OR {PRJ_ROW_OWNER_ISACC}-->
             {PRJ_ROW_OWNER_NAME}
             <!-- ELSE -->
             {PRJ_ROW_OWNER_FULL_NAME}

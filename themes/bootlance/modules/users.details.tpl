@@ -24,7 +24,7 @@
 		<div class="tabbable">
 			<ul class="nav nav-tabs">
 				<li<!-- IF !{PHP.tab} --> class="active"<!-- ENDIF -->><a href="{USERS_DETAILS_DETAILSLINK}#tab_info" data-toggle="tab">{PHP.L.Main}</a></li>
-                <!-- IF {USERS_DETAILS_ISPRO} || {USERS_DETAILS_ISACC} -->
+                <!-- IF {USERS_DETAILS_ISPRO} OR {USERS_DETAILS_ISACC} OR ({PHP.usr.id} == {PHP.urr.user_id}) -->
                     <!-- IF {PHP.cot_modules.folio} -->
                     <li<!-- IF {PHP.tab} == 'portfolio' --> class="active"<!-- ENDIF -->><a href="{USERS_DETAILS_FOLIO_URL}#tab_portfolio" data-toggle="tab">{PHP.L.folio} {USERS_DETAILS_FOLIO_COUNT}</a></li>
                     <!-- ENDIF -->
@@ -42,7 +42,7 @@
 		</div>
 		<div class="tab-content">
 			<div class="tab-pane<!-- IF !{PHP.tab} --> active<!-- ENDIF -->" id="tab_info">
-                <!-- IF {USERS_DETAILS_ISPRO} || {USERS_DETAILS_ISACC} -->
+                <!-- IF {USERS_DETAILS_ISPRO} OR {USERS_DETAILS_ISACC} OR ({PHP.usr.id} == {PHP.urr.user_id}) -->
 				<table class="table">
 	<!-- IF {PHP.cot_modules.pm} -->
 					<tr>
@@ -79,18 +79,18 @@
 						<td>{USERS_DETAILS_REGDATE}</td>
 					</tr>
 				</table>
-                <!-- ELSE -->
-                    <div>Пользователь не активировал данную функцию</div>
-                    <!-- IF {PHP.usr.id} == {PHP.urr.user_id} -->
+                    <!-- IF {PHP.usr.id} == {PHP.urr.user_id} AND !{USERS_DETAILS_ISPRO} AND !{USERS_DETAILS_ISACC} -->
+                    <div>Ваш профиль не открыт для общего доступа</div>
                     <div style="margin-top: 20px">
                         <a href="{PHP|cot_url('paypro', '')}" class="btn btn-success">Купить <span class="label label-important">PRO</span></a>
                         <div style="margin-left: 10px; display: inline-block">или</div>
                         <a href="{PHP|cot_url('payacc', '')}" class="btn btn-link">Открыть профиль</a>
                     </div>
                     <!-- ENDIF -->
+                <!-- ELSE -->
+                    <div>Пользователь не активировал данную функцию</div>
                 <!-- ENDIF -->
             </div>
-        <!-- IF {USERS_DETAILS_ISPRO} || {USERS_DETAILS_ISACC} -->
 			<div class="tab-pane<!-- IF {PHP.tab} == 'portfolio' --> active<!-- ENDIF -->" id="tab_portfolio">
 				{PORTFOLIO}
 			</div>
@@ -100,10 +100,9 @@
 			<div class="tab-pane<!-- IF {PHP.tab} == 'projects' --> active<!-- ENDIF -->" id="tab_projects">
 				{PROJECTS}
 			</div>
-			<div class="tab-pane<!-- IF {PHP.tab} == 'reviews' --> active<!-- ENDIF -->" id="tab_reviews">
+            <div class="tab-pane<!-- IF {PHP.tab} == 'reviews' --> active<!-- ENDIF -->" id="tab_reviews">
 				{REVIEWS}
 			</div>
-        <!-- ENDIF -->
 		</div>
 	</div>
 </div>

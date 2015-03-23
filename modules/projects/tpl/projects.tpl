@@ -25,7 +25,11 @@
 		{PRJ_OWNER_AVATAR}
 	</div>
 	<div class="span5">
+        <!-- IF {PRJ_OWNER_ISPRO} OR {PRJ_OWNER_ISACC} -->
 		<p>{PRJ_OWNER_NAME}</p>
+        <!-- ELSE -->
+		<p>{PRJ_OWNER_FULL_NAME}</p>
+        <!-- ENDIF -->
 		<p>
 			<!-- IF {PRJ_OWNER_ISPRO} -->
 			<span class="label label-important">PRO</span>

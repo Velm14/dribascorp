@@ -53,7 +53,7 @@
 
 		<div id="listmarket">
 			<!-- BEGIN: PRD_ROWS -->
-			<div class="media">
+            <div class="media<!-- IF {PRD_ROW_ISBOLD} --> well prjbold<!-- ENDIF --><!-- IF {PRD_ROW_ISTOP} --> well prjtop<!-- ENDIF -->">
 				<!-- IF {PRD_ROW_MAVATAR.1} -->
 				<div class="pull-left">
 					<a href="{PRD_ROW_URL}"><div class="thumbnail"><img src="{PRD_ROW_MAVATAR.1|cot_mav_thumb($this, 100, 100, crop)}" /></div></a>
@@ -61,7 +61,7 @@
 				<!-- ENDIF -->
 				<h4><!-- IF {PRD_ROW_COST} > 0 --><div class="cost pull-right">{PRD_ROW_COST} {PHP.cfg.payments.valuta}</div><!-- ENDIF --><a href="{PRD_ROW_URL}">{PRD_ROW_SHORTTITLE}</a></h4>
 				<p class="owner">
-                    <!-- IF {PRD_ROW_ISPRO} || {PRD_ROW_ISACC}-->
+                    <!-- IF {PRD_ROW_OWNER_ISPRO} OR {PRD_ROW_OWNER_ISACC}-->
                     {PRD_ROW_OWNER_NAME}
                     <!-- ELSE -->
                     {PRD_ROW_OWNER_FULL_NAME}

@@ -210,6 +210,7 @@ foreach($sqllist_rowset as $item)
 		"PRJ_ROW_ODDEVEN" => cot_build_oddeven($jj)
 	));
 
+//    CVarDumper::dump()
 	/* === Hook - Part2 : Include === */
 	foreach ($extp as $pl)
 	{

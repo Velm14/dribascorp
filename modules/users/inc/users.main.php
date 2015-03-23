@@ -270,6 +270,7 @@ foreach ($sqlusers as $urr)
 		'USERS_ROW' => $urr
 	));
 	$t->assign(cot_generate_usertags($urr, 'USERS_ROW_'));
+//    CVarDumper::dump(cot_generate_usertags($urr, 'USERS_ROW_'),6,1);
 	/* === Hook - Part2 : Include === */
 	foreach ($extp as $pl)
 	{

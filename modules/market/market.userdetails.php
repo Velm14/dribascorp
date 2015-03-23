@@ -86,7 +86,7 @@ $extp = cot_getextplugins('market.userdetails.loop');
 foreach ($sqllist_rowset as $item)
 {
 	$t1->assign(cot_generate_markettags($item, 'PRD_ROW_', $cfg['market']['shorttextlen'], $usr['isadmin'], $cfg['homebreadcrumb']));
-	
+//	CVarDumper::dump(cot_generate_markettags($item, 'PRD_ROW_', $cfg['market']['shorttextlen'], $usr['isadmin'], $cfg['homebreadcrumb']),6,1);
 	/* === Hook === */
 	foreach ($extp as $pl)
 	{

@@ -75,7 +75,7 @@
 					<a href="{PRJ_ROW_URL}">{PRJ_ROW_SHORTTITLE}</a>
 				</h4>
 				<p class="owner small">
-                    <!-- IF {PRJ_ROW_ISPRO} || {PRJ_ROW_ISACC}-->
+                    <!-- IF {PRJ_ROW_OWNER_ISPRO} OR {PRJ_OWNER_ROW_ISACC} -->
                     {PRJ_ROW_OWNER_NAME}
                     <!-- ELSE -->
                     {PRJ_ROW_OWNER_FULL_NAME}

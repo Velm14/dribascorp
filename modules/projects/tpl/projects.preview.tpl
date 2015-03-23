@@ -15,7 +15,7 @@
 		<p>{PRJ_OWNER_NAME}</p>
 		<p>
 			<!-- IF {PRJ_OWNER_ISPRO} -->
-			<span class="label label-important">PRO</span> 
+			<span class="label label-important">PRO</span>
 			<!-- ENDIF -->
 			<span class="label label-info">{PRJ_OWNER_USERPOINTS}</span>
 		</p>
@@ -23,9 +23,9 @@
 </div>
 <hr/>
 <div class="row">
-	<div class="span8">	
+	<div class="span8">
 		{PRJ_TEXT}
-		
+
 		<!-- IF {PHP.cot_plugins_active.mavatars} -->
 			<!-- IF {PRJ_MAVATARCOUNT} -->
 				<div style="clear:both;"></div>
@@ -45,7 +45,7 @@
 		<p class="date">{PHP.L.Date}: {PRJ_DATE}</p>
 	</div>
 </div>
-<a href="{PRJ_SAVE_URL}" class="btn btn-success"><span>{PHP.L.Publish}</span></a> 
+<a href="{PRJ_SAVE_URL}" class="btn btn-success"><span>{PHP.L.Publish}</span></a>
 <a href="{PRJ_EDIT_URL}" class="btn btn-info"><span>{PHP.L.Edit}</span></a>
 
-<!-- END: MAIN -->	
+<!-- END: MAIN -->

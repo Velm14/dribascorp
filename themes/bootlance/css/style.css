@@ -256,3 +256,5 @@ ol					{ margin-left:20px; list-style-type:decimal; }
 #listprojects {}
 #listprojects .prjtop { background-color: #feefb3; }
 #listprojects .prjbold { background-color: #dff2bf; }
+#listmarket .prjtop{background-color: #feefb3;}
+#listmarket .prjbold{background-color: #dff2bf;}

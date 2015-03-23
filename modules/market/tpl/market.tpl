@@ -14,7 +14,7 @@
 			<div class="pull-left">
 				<a href="{PRD_MAVATAR.1.FILE}"><div class="thumbnail"><img src="{PRD_MAVATAR.1|cot_mav_thumb($this, 200, 200, crop)}" /></div></a>
 
-				
+
 				<!-- IF {PRD_MAVATARCOUNT} -->
 				<p>&nbsp;</p>
 				<div class="row">
@@ -26,7 +26,7 @@
 				</div>
 				<!-- ENDIF -->
 			</div>
-			<!-- ENDIF -->		
+			<!-- ENDIF -->
 			<p class="date">[{PRD_DATE}]</p>
 			<p class="location">{PRD_COUNTRY} {PRD_REGION} {PRD_CITY}</p>
 			<p class="text">{PRD_TEXT}</p>
@@ -36,24 +36,30 @@
 				<p><a class="btn btn-large btn-success" href="{PRD_ID|cot_url('marketorders', 'm=neworder&pid='$this)}">{PHP.L.marketorders_neworder_button}</a></p>
 				<!-- ENDIF -->
 			<!-- ENDIF -->
-		</div>	
+		</div>
 	</div>
-	<div class="span3">	
+	<div class="span3">
 		<div class="row">
 			<div class="span1">{PRD_OWNER_AVATAR}</div>
 			<div class="span2">
 				<div class="pull-right"><span class="label label-info">{PRD_OWNER_USERPOINTS}</span></div>
-				<div class="owner">{PRD_OWNER_NAME}</div>
+				<div class="owner">
+                    <!-- IF {PRD_OWNER_ISPRO} OR {PRD_OWNER_ISACC} -->
+                    {PRD_OWNER_NAME}
+                    <!-- ELSE -->
+                    {PRD_OWNER_FULL_NAME}
+                    <!-- ENDIF -->
+                </div>
 			</div>
 		</div>
 		<!-- IF {PRD_USER_IS_ADMIN} -->
 		<div class="well well-small">
-			{PRD_ADMIN_EDIT} &nbsp; 
+			{PRD_ADMIN_EDIT} &nbsp;
 			<!-- IF {PRD_STATE} != 2 -->
 				<a href="{PRD_HIDEPRODUCT_URL}">{PRD_HIDEPRODUCT_TITLE}</a>
 			<!-- ENDIF -->
 		</div>
-		<!-- ENDIF -->	
+		<!-- ENDIF -->
 	</div>
 </div>
 

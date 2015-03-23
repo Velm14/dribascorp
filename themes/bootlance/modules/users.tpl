@@ -38,10 +38,10 @@
 							<span class="label label-info">{USERS_ROW_USERPOINTS}</span>
 						</div>
 						<strong>
-                            <!-- IF {USERS_ROW_ISPRO} || {USERS_ROW_ISACC}-->
-                            {USERS_ROW_NAME}
+                            <!-- IF  {USERS_ROW_ISACC} OR {USERS_ROW_ISPRO} -->
+                                {USERS_ROW_NAME}
                             <!-- ELSE -->
-                            {USERS_ROW_FULL_NAME}
+                                {USERS_ROW_FULL_NAME}
                             <!-- ENDIF -->
                         </strong><!-- IF {USERS_ROW_ISPRO} --> <span class="label label-important">PRO</span><!-- ENDIF -->
 						<p>{USERS_ROW_COUNTRY} {USERS_ROW_REGION} {USERS_ROW_CITY}</p>

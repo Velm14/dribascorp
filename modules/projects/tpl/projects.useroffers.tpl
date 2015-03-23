@@ -11,7 +11,7 @@
 
 <!-- BEGIN: OFFER_ROWS -->
 <div class="row">
-	<div class="span12">		
+	<div class="span12">
 		<div class="media<!-- IF {OFFER_ROW_PROJECT_ISBOLD} --> well prjbold<!-- ENDIF --><!-- IF {OFFER_ROW_PROJECT_ISTOP} --> well prjtop<!-- ENDIF -->">
 			<h4>
 				<!-- IF {OFFER_ROW_PROJECT_COST} > 0 --><div class="pull-right">{OFFER_ROW_PROJECT_COST} {PHP.cfg.payments.valuta}</div><!-- ENDIF -->
@@ -41,7 +41,7 @@
 					</p>
 					<p class="time">
 						<!-- IF {OFFER_ROW_TIMEMAX} > {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 -->
-						{PHP.L.offers_sroki}: {PHP.L.offers_ot} 
+						{PHP.L.offers_sroki}: {PHP.L.offers_ot}
 						{OFFER_ROW_TIMEMIN} {PHP.L.offers_do} {OFFER_ROW_TIMEMAX} {OFFER_ROW_TIMETYPE}
 						<!-- ENDIF -->
 						<!-- IF {OFFER_ROW_TIMEMAX} == {OFFER_ROW_TIMEMIN} AND {OFFER_ROW_TIMEMIN} != 0 OR {OFFER_ROW_TIMEMAX} == 0 AND {OFFER_ROW_TIMEMIN} != 0 -->
@@ -61,7 +61,7 @@
 					</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 </div>
 <hr/>
