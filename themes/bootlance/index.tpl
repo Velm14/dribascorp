@@ -25,7 +25,7 @@
 		</div>
 		<!-- ENDIF -->
 	</div>
-	<div class="span9">
+	<div class="span6">
 		{PROJECTS_SEARCH}
 		
 		<!-- IF {PHP.cot_plugins_active.paypro} -->
@@ -36,6 +36,12 @@
 		
 		{PROJECTS}
 	</div>
+    <div class="span3">
+        <h4 class="mboxHD">{PHP.L.userpoints_products}</h4>
+        {PHP|cot_get_products (4, 5)}
+        <br/>
+        <a href="/index.php?e=market">{PHP.L.userpoints_watchall}</a>
+    </div>
 </div>
 	
 <!-- END: MAIN -->

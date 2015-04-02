@@ -155,6 +155,11 @@ $t = new XTemplate($mskin);
 // Error and message handling
 cot_display_messages($t);
 
+$left_block = new XTemplate(cot_tplfile('projects.left-block'));
+//$left_block->parse('BLA');
+//CVarDumper::dump($left_block,6,1);die();
+$t->assign('BLA', $left_block);
+$left_block->parse('BLA');
 $t->assign(array(
 	"PRJADD_FORM_SEND" => cot_url('projects', 'm=add&c='.$c.'&type='.$type.'&a=add'),
 	"PRJADD_FORM_CAT" => cot_selectbox_structure('projects', $ritem['item_cat'], 'rcat'),

@@ -3,7 +3,10 @@
 <div class="breadcrumb">{PHP.L.projects_add_project_title}</div>
 
 {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
-<div class="customform">
+<div class="span3">
+    {BLA}
+</div>
+<div class="customform span6">
 	<form action="{PRJADD_FORM_SEND}" method="post" name="newadv" enctype="multipart/form-data">
 		<table class="table">
 			<!-- IF {PHP.projects_types} -->
@@ -67,5 +70,7 @@
 		</table>
 	</form>
 </div>
-
+<div class="span3">
+    {BLA1}
+</div>
 <!-- END: MAIN -->
